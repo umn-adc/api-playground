@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# 🔍 CHALLENGE 2: API PI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Problem
 
-Currently, two official plugins are available:
+**In this challenge, you'll be working with APIs and user input to create a dynamic form. Your task is to clone the provided GitHub repository and implement a form that interacts with any API of your choice. Here’s a breakdown of steps to complete this challenge:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the Repository:**
+   Start by cloning the GitHub repository from the [`api-playground`](https://github.com/umn-adc/api-playground) repository. This repository already contains some helpful libraries for completing the challenge.
 
-## Expanding the ESLint configuration
+2. **Choose an API:**
+   Select an API; This could be anything from a weather API to a public data API—whatever sparks your interest! The only requirement is that the API must accept at least **query or ID parameters** or a **request body**.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Create a Form Page:**
 
-- Configure the top-level `parserOptions` property like this:
+   - Implement a form in a new page in `routes/` that allows users to input the necessary parameters for the API request.
+   - Upon submission, your form should send requests to the chosen API based on user input and display the results on that same page.
+     > ### 💡 **Hint**!
+     >
+     > You can use the provided `Input`, `Button`, and `ResponseViewer` components if you'd like! It might make your life a tiny bit easier.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. **Add to the Router:**
+   Integrate your new form page into the existing router structure of the application (look at `routes/router.tsx`). You should see a link to your page in `Home` after doing this.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+5. **Make a Pull Request:**
+   Once you've implemented the above steps, push your changes to a new branch and create a pull request for review.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Scoring
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 100 points
+
+### Submission deadline
+
+`Tue Nov 7 2024 23:59:59 GMT-0600 (Central Standard Time)`
+
+### Bonus
+
+**⏱️ Submission Time**
+
+> **`[+20 points]`** ≤ **1** day \
+> **`[+15 points]`** ≤ **3** days \
+> **`[+10 points]`** ≤ **5** days \
+> **`[-1 point]`** ∙ _(**your leaderboard position** - 1)_
+
+**✨ _Extra Points_ ✨**
+
+- Using `async/await` for API requests **`(+20 points)`**
+- Configuring an axios object with a `baseURL` and using the `config` parameter in your request **`(+15 points)`**
+- Custom page design to enhance user experience **`(+10 points)`**
+
+### Example API choices
+
+- [OpenWeatherMap API](https://openweathermap.org/api)
+- [The Cat API](https://thecatapi.com/)
+- [PokeAPI](https://pokeapi.co/)
+
+## Submission
+
+### GitHub Pull Request
+
+Submit your pull request to the main branch of the [`api-playground`](https://github.com/umn-adc/api-playground) repository. Make sure to include a descriptive title and comments explaining your implementation.
+
+**_Good luck, and happy coding!_**
